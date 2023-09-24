@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open and Close Tab</title>
+</head>
+<body>
+    <h1>Welcome to My Web Page</h1>
+    <p>Click the button to open a new tab and close it within a second:</p>
+
+    <button onclick="openAndCloseTab()">Trigger the Light</button>
+
+    <script>
+        function openAndCloseTab() {
+            // Open a new tab with the specified URL
+            const newTab = window.open('https://maker.ifttt.com/trigger/GFE-Light/json/with/key/o6BzlX_mBGi7EXcpQkYCsmb0_5VeIajJVnOcw3K7TYL', '_blank');
+
+            // Close the new tab after 1000 milliseconds (1 second)
+            setTimeout(function() {
+                newTab.close();
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
