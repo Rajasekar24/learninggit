@@ -12,6 +12,15 @@
     <button onclick="openAndCloseTab()">Trigger the Light</button>
 
     <script>
+         function setSessionTimeout() {
+            setTimeout(function() {
+                window.location.href = 'logout.html'; // Redirect to the logout page
+            }, 120000); // 2 minutes (2 * 60,000 milliseconds)
+        }
+
+        // Call the function to set the session timeout when the page loads
+        setSessionTimeout();
+        
         function openAndCloseTab() {
             // Open a new tab with the specified URL
             const newTab = window.open('https://maker.ifttt.com/trigger/GFE-Light/json/with/key/o6BzlX_mBGi7EXcpQkYCsmb0_5VeIajJVnOcw3K7TYL', '_blank');
